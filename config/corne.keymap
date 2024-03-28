@@ -84,7 +84,7 @@
 &kp ESCAPE      &trans  &trans  &trans        &trans     &trans              &trans  &trans  &trans  &trans  &trans         &trans
 &kp TAB         &kp A   &kp S   &kp D         &kp F      &kp G               &kp H   &kp J   &kp K   &kp L   &kp SEMICOLON  &trans
 &kp LEFT_SHIFT  &trans  &trans  &trans        &trans     &trans              &trans  &trans  &trans  &trans  &trans         &to 0
-                                &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &mo 1   &mo 2
+                                &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans
             >;
         };
     };
