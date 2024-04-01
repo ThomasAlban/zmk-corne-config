@@ -17,6 +17,10 @@
 #define THUMBS 36 37 38 39 40 41
 
 &led_strip { chain-length = <27>; }; // make sure that all the LEDs turn on 
+
+&nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; }; // fix for nice! view displays
+
+
 / {
     behaviors {
         // add homerow mod behaviours
