@@ -17,9 +17,7 @@
 #define THUMBS 36 37 38 39 40 41
 
 #define SUPER LS(LA(LC(LCMD)))
-#define &tr &trans
-
-&led_strip { chain-length = <27>; }; // make sure that all the LEDs turn on 
+#define tr trans
 
 / {
     behaviors {
@@ -109,3 +107,5 @@
 //         };
     };
 };
+
+&led_strip { chain-length = <27>; }; // make sure that all the LEDs turn on 
