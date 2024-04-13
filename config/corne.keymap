@@ -71,6 +71,15 @@
         };
     };
 
+    macros {
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp O &kp M &kp A &kp S &kp A &kp L &kp B &kp A &kp N &kp M &kp U &kp S &kp I &kp C &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         Base {
