@@ -125,7 +125,7 @@
 &kp PLUS                  &kp Q  &kp W         &kp F        &kp P        &kp B        &kp J    &kp L        &kp U        &kp Y         &kp APOS    &kp EQUAL
 &mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL R  &hml LALT S  &hml LGUI T  &kp G        &kp M    &hmr RGUI N  &hmr LALT E  &hmr LCTRL I  &kp O       &slh_morph
 &kp MINUS                 &kp Z  &kp X         &kp C        &kp D        &kp V        &kp K    &kp H        &comma_semi  &dot_colon    &qmrk_excl  &kp UNDER
-                                               &mo 3        &kp SPACE    &kp LSHFT    &kp RET  &bspc_del    &mo 4
+                                               &mo 3        &kp SPACE    &kp LSHFT    &kp RET  &bspc_del    &lt 4 TAB
             >;
         };
 
