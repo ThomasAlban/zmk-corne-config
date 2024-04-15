@@ -92,7 +92,7 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
-            if-layers = <3 4>;
+            if-layers = <4 3>;
             then-layer = <5>;
         };
     };
@@ -115,7 +115,7 @@
 &kp PLUS                  &kp Q  &kp W         &kp E        &kp R        &kp T        &kp Y           &kp U        &kp I        &kp O         &kp P       &kp EQUAL
 &mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G        &kp H           &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp APOS    &slh_morph
 &kp MINUS                 &kp Z  &kp X         &kp C        &kp V        &kp B        &kp N           &kp M        &comma_semi  &dot_colon    &qmrk_excl  &kp UNDER
-                                               &kp TAB      &mo 3        &kp SPACE    &mt LSHIFT RET  &mo 4        &bspc_del
+                                               &kp TAB      &mo 3        &kp SPACE    &mt LSHIFT RET  &bspc_del    &mo 4
             >;
         };
 
@@ -125,7 +125,7 @@
 &kp PLUS                  &kp Q  &kp W         &kp F        &kp P        &kp B        &kp J    &kp L        &kp U        &kp Y         &kp APOS    &kp EQUAL
 &mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL R  &hml LALT S  &hml LGUI T  &kp G        &kp M    &hmr RGUI N  &hmr LALT E  &hmr LCTRL I  &kp O       &slh_morph
 &kp MINUS                 &kp Z  &kp X         &kp C        &kp D        &kp V        &kp K    &kp H        &comma_semi  &dot_colon    &qmrk_excl  &kp UNDER
-                                               &mo 3        &kp SPACE    &kp LSHFT    &kp RET  &bspc_del    &mo 4
+                                               &mo 3        &kp SPACE    &kp LSHFT    &kp RET  &bspc_del    &mo 3
             >;
         };
 
@@ -133,8 +133,8 @@
             label = "Game";
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y    &kp U      &kp I      &kp O    &kp P     &to 0
-&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H    &kp J      &kp K      &kp L    &kp SEMI  &mo 3
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo 4
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H    &kp J      &kp K      &kp L    &kp SEMI  &mo 4
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo 3
                          &kp LALT  &kp SPACE  &kp LCMD    &kp RET  &bspc_del  &kp LCTRL
             >;
         };
@@ -142,20 +142,20 @@
         Left {
             label = "Left";
             bindings = <
-&none  &kp PIPE       &kp AT    &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp GRAVE  &kp TILDE         &none
-&none  &kp LESS_THAN  &kp LBKT  &kp LBRC   &kp LPAR  &none        &none      &kp RPAR  &kp RBRC   &kp RBKT   &kp GREATER_THAN  &none
-&none  &none          &none     &none      &none     &none        &none      &none     &none      &none      &none             &none
-                                &trans     &trans    &trans       &trans     &trans    &trans
+&none                 &kp N1  &kp N2     &kp N3    &kp N4    &kp N5    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0     &tog 2
+&sk LS(LA(LC(LGUI)))  &none   &sk LCTRL  &sk LALT  &sk LGUI  &none     &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &tog 1
+&none                 &none   &none      &none     &email    &none     &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+                                         &trans    &trans    &trans    &trans  &trans    &trans
             >;
         };
 
         Right {
             label = "Right";
             bindings = <
-&none                 &kp N1  &kp N2     &kp N3    &kp N4    &kp N5    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0     &tog 2
-&sk LS(LA(LC(LGUI)))  &none   &sk LCTRL  &sk LALT  &sk LGUI  &none     &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &tog 1
-&none                 &none   &none      &none     &email    &none     &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
-                                         &trans    &trans    &trans    &trans  &trans    &trans
+&none  &kp PIPE       &kp AT    &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp GRAVE  &kp TILDE         &none
+&none  &kp LESS_THAN  &kp LBKT  &kp LBRC   &kp LPAR  &none        &none      &kp RPAR  &kp RBRC   &kp RBKT   &kp GREATER_THAN  &none
+&none  &none          &none     &none      &none     &none        &none      &none     &none      &none      &none             &none
+                                &trans     &trans    &trans       &trans     &trans    &trans
             >;
         };
 
