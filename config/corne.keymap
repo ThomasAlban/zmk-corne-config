@@ -77,6 +77,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
+
+        hold_bspc: hold_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_BSPC";
+            bindings = <&kp>, <&bspc_del>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     conditional_layers {
@@ -103,10 +112,10 @@
         Base {
             label = "Base";
             bindings = <
-&kp PLUS                  &kp Q  &kp W         &kp E        &kp R          &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P       &kp EQUAL
-&mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F    &kp G        &kp H      &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp APOS    &slh_morph
-&kp MINUS                 &kp Z  &kp X         &kp C        &kp V          &kp B        &kp N      &kp M        &comma_semi  &dot_colon    &qmrk_excl  &kp UNDER
-                                               &mo 3        &mt LSHFT TAB  &kp SPACE    &kp ENTER  &bspc_del    &mo 4
+&kp PLUS                  &kp Q  &kp W         &kp E           &kp R        &kp T        &kp Y      &kp U        &kp I               &kp O         &kp P       &kp EQUAL
+&mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D     &hml LGUI F  &kp G        &kp H      &hmr RGUI J  &hmr RALT K         &hmr RCTRL L  &kp APOS    &slh_morph
+&kp MINUS                 &kp Z  &kp X         &kp C           &kp V        &kp B        &kp N      &kp M        &comma_semi         &dot_colon    &qmrk_excl  &kp UNDER
+                                               &mt LSHIFT TAB  &mo 3        &kp SPACE    &kp ENTER  &mo 4        &hold_bspc RSHFT 0
             >;
         };
 
