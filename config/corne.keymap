@@ -3,25 +3,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
-/*           42 KEY MATRIX / LAYOUT MAPPING
-  ╭────────────────────────┬────────────────────────╮
-  │  0   1   2   3   4   5 │  6   7   8   9  10  11 │
-  │ 12  13  14  15  16  17 │ 18  19  20  21  22  23 │
-  │ 24  25  26  27  28  29 │ 30  31  32  33  34  35 │
-  ╰───────────╮ 36  37  38 │ 39  40  41 ╭───────────╯
-              ╰────────────┴────────────╯            */
-
-#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38
-#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41
-#define THUMBS 36 37 38 39 40 41
-#define SUPER LS(LA(LC(LCMD)))
-#define BSE_L 0
-#define CMK_L 1
-#define GME_L 2
-#define RGT_L 3
-#define LFT_L 4
-#define FUN_L 5
-
 / {
     behaviors {
         bspc_del: bspc_del {
