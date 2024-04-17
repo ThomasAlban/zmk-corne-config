@@ -68,6 +68,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mo_bspc: mo_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_BSPC";
+            bindings = <&mo>, <&bspc_del>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     conditional_layers {
@@ -101,20 +110,20 @@
         Base {
             label = "Base";
             bindings = <
-&none                     &kp Q  &kp W         &kp E        &kp R        &kp T               &kp Y             &kp U        &kp I        &kp O         &kp P     &none
-&mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G               &kp H             &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp APOS  &bspc_del
-&none                     &kp Z  &kp X         &kp C        &kp V        &kp B               &kp N             &kp M        &comma_excl  &dot_qmark    &kp SEMI  &none
-                                               &kp TAB      &mo 3        &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 4        &kp UNDER
+&none  &kp Q  &kp W  &kp E          &kp R      &kp T             &kp Y            &kp U         &kp I                       &kp O       &kp P     &none
+&none  &kp A  &kp S  &kp D          &kp F      &kp G             &kp H            &kp J         &kp K                       &kp L       &kp APOS  &none
+&none  &kp Z  &kp X  &kp C          &kp V      &kp B             &kp N            &kp M         &comma_excl                 &dot_qmark  &kp SEMI  &none
+                     &mt LSHFT TAB  &lt 3 ESC  &mt LCMD SPACE    &mt LSHFT ENTER  &mo_bspc 4 0  &mt LS(LA(LC(LGUI))) UNDER
             >;
         };
 
         Colemak {
             label = "Colemak";
             bindings = <
-&trans  &kp Q  &kp W         &kp F        &kp P        &kp B     &kp J   &kp L        &kp U        &kp Y         &kp APOS  &trans
-&trans  &kp A  &hml LCTRL R  &hml LALT S  &hml LGUI T  &kp G     &kp M   &hmr RGUI N  &hmr LALT E  &hmr LCTRL I  &kp O     &trans
-&trans  &kp Z  &kp X         &kp C        &kp D        &kp V     &kp K   &kp H        &trans       &trans        &trans    &trans
-                             &trans       &trans       &trans    &trans  &trans       &trans
+&trans  &kp Q  &kp W  &kp F   &kp P   &kp B     &kp J   &kp L   &kp U   &kp Y   &kp APOS  &trans
+&trans  &kp A  &kp R  &kp S   &kp T   &kp G     &kp M   &kp N   &kp E   &kp I   &kp O     &trans
+&trans  &kp Z  &kp X  &kp C   &kp D   &kp V     &kp K   &kp H   &trans  &trans  &trans    &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -141,10 +150,10 @@
         Right {
             label = "Right";
             bindings = <
-&none  &kp N1  &kp N2     &kp N3    &kp N4    &kp N5    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0     &none
-&none  &none   &sk LCTRL  &sk LALT  &sk LGUI  &none     &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none   &none      &email2   &email    &none     &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
-                          &trans    &trans    &trans    &trans  &trans    &trans
+&none  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0     &none
+&none  &sk LCTRL  &sk LALT  &sk LCMD  &sk LSHFT  &none     &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none      &none     &email2   &email     &none     &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+                            &trans    &trans     &trans    &trans  &trans    &trans
             >;
         };
 
