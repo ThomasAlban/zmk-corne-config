@@ -14,29 +14,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        comma_semi: comma_semi {
+        comma_excl: comma_excl {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMI";
+            label = "COMMA_EXCL";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        dot_colon: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp COMMA>, <&kp EXCLAMATION>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        qmrk_excl: qmrk_excl {
+        dot_qmark: dot_qmark {
             compatible = "zmk,behavior-mod-morph";
-            label = "QUESTION_EXCLAMATION";
+            label = "DOT_QMARK";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
+            bindings = <&kp DOT>, <&kp QUESTION>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -110,10 +101,10 @@
         Base {
             label = "Base";
             bindings = <
-&kp PLUS                  &kp Q  &kp W         &kp E        &kp R        &kp T               &kp Y             &kp U        &kp I        &kp O         &kp P       &kp SLASH
-&mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G               &kp H             &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp APOS    &kp UNDER
-&kp MINUS                 &kp Z  &kp X         &kp C        &kp V        &kp B               &kp N             &kp M        &comma_semi  &dot_colon    &qmrk_excl  &kp EQUAL
-                                               &kp TAB      &mo 3        &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 4        &bspc_del
+&none                     &kp Q  &kp W         &kp E        &kp R        &kp T               &kp Y             &kp U        &kp I        &kp O         &kp P     &none
+&mt LS(LA(LC(LGUI))) ESC  &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G               &kp H             &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp APOS  &bspc_del
+&none                     &kp Z  &kp X         &kp C        &kp V        &kp B               &kp N             &kp M        &comma_excl  &dot_qmark    &kp SEMI  &none
+                                               &kp TAB      &mo 3        &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 4        &kp UNDER
             >;
         };
 
@@ -140,10 +131,10 @@
         Left {
             label = "Left";
             bindings = <
-&none  &kp AT         &kp POUND  &kp LA(N3)  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS       &kp STAR  &kp GRAVE  &kp TILDE         &none
-&none  &kp LESS_THAN  &kp LBKT   &kp LBRC    &kp LPAR    &none          &none      &kp RPAR       &kp RBRC  &kp RBKT   &kp GREATER_THAN  &none
-&none  &none          &none      &none       &kp PIPE    &none          &none      &kp BACKSLASH  &none     &none      &none             &none
-                                 &trans      &trans      &trans         &trans     &trans         &trans
+&none  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none       &none   &kp AMPS    &kp LBKT  &kp RBKT  &kp TILDE   &none
+&none  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp HASH    &kp AT  &kp COLON   &kp LPAR  &kp RPAR  &kp QMARK   &none
+&none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none       &none   &kp LA(N3)  &kp LBRC  &kp RBRC  &kp DOLLAR  &none
+                                 &trans            &trans     &trans      &trans  &trans      &trans
             >;
         };
 
