@@ -86,6 +86,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lt_hpref: lt_hpref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_HPREF";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     conditional_layers {
@@ -119,10 +128,10 @@
         Base {
             label = "Base";
             bindings = <
-&none                     &kp Q         &kp W        &kp E        &kp R      &kp T               &kp Y      &kp U        &kp I        &kp O        &kp P                 &none
-&mt LS(LA(LC(LGUI))) ESC  &hml LCTRL A  &hml LALT S  &hml LCMD D  &kp F      &kp G               &kp H      &kp J        &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMICOLON  &kp APOS
-&none                     &kp Z         &kp X        &kp C        &kp V      &kp B               &kp N      &kp M        &comma_excl  &dot_qmark   &slh_morph            &none
-                                                     &kp LGUI     &lt 3 TAB  &mt LSHIFT SPACE    &bspc_del  &lt 4 ENTER  &kp UNDER
+&none                     &kp Q         &kp W        &kp E        &kp R          &kp T                &kp Y              &kp U      &kp I        &kp O        &kp P                 &none
+&mt LS(LA(LC(LGUI))) ESC  &hml LCTRL A  &hml LALT S  &hml LCMD D  &kp F          &kp G                &kp H              &kp J      &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMICOLON  &kp APOS
+&none                     &kp Z         &kp X        &kp C        &kp V          &kp B                &kp N              &kp M      &comma_excl  &dot_qmark   &slh_morph            &none
+                                                     &kp LGUI     &mt LSHFT ESC  &lt_hpref 3 SPACE    &lt_hpref 4 ENTER  &bspc_del  &kp UNDER
             >;
         };
 
@@ -162,7 +171,7 @@
 &none  &none      &kp N7  &kp N8  &kp N9  &none       &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
 &none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
 &none  &none      &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                          &trans  &trans  &kp N0      &trans   &trans     &trans
+                          &trans  &kp N0  &trans      &trans   &trans     &trans
             >;
         };
 
