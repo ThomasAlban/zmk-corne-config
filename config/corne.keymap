@@ -130,7 +130,7 @@
             bindings = <
 &none                     &kp Q         &kp W        &kp F        &kp P          &kp B                &kp J              &kp L      &kp U        &kp Y        &kp SEMICOLON  &none
 &mt LS(LA(LC(LGUI))) TAB  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T          &kp G                &kp M              &kp N      &hmr RCMD E  &hmr RALT I  &hmr LCTRL O   &kp APOS
-&none                     &kp Z         &kp X        &kp C        &kp D          &kp V                &kp K              &kp H      &trans       &trans       &trans         &none
+&none                     &kp Z         &kp X        &kp C        &kp D          &kp V                &kp K              &kp H      &comma_excl  &dot_qmark   &slh_morph     &none
                                                      &kp LCMD     &mt LSHFT ESC  &lt_hpref 3 SPACE    &lt_hpref 4 ENTER  &bspc_del  &kp UNDER
             >;
         };
@@ -140,7 +140,7 @@
             bindings = <
 &trans  &kp Q         &kp W        &kp E        &kp R   &kp T     &kp Y   &kp U   &kp I        &kp O        &kp P                 &trans
 &trans  &hml LCTRL A  &hml LALT S  &hml LCMD D  &kp F   &kp G     &kp H   &kp J   &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMICOLON  &trans
-&trans  &kp Z         &kp X        &kp C        &kp V   &kp B     &kp N   &kp M   &comma_excl  &dot_qmark   &slh_morph            &trans
+&trans  &kp Z         &kp X        &kp C        &kp V   &kp B     &kp N   &kp M   &trans       &trans       &trans                &trans
                                    &trans       &trans  &trans    &trans  &trans  &trans
             >;
         };
