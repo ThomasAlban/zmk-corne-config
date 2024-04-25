@@ -178,7 +178,7 @@
         Func {
             label = "Func";
             bindings = <
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &to 3     &to 4   &kp C_VOL_UP  &kp C_NEXT        &kp C_BRI_UP       &bt BT_NXT  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &tog 3    &tog 4  &kp C_VOL_UP  &kp C_NEXT        &kp C_BRI_UP       &bt BT_NXT  &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &tog 2    &tog 0  &kp C_VOL_DN  &kp C_PLAY_PAUSE  &kp C_BRI_DN       &bt BT_PRV  &none
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp C_MUTE    &kp C_PREV        &ext_power EP_TOG  &bt BT_CLR  &none
                         &trans   &trans   &trans    &trans  &trans        &trans
