@@ -158,10 +158,10 @@
         Sym {
             label = "Sym";
             bindings = <
-&none  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none         &none   &kp AMPS   &kp LBKT  &kp RBKT  &kp TILDE   &none
-&none  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
-&none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none         &none   &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
-                                 &trans            &trans     &trans        &trans  &trans     &trans
+&none   &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none         &none   &kp AMPS   &kp LBKT  &kp RBKT  &kp TILDE   &none
+&tog 3  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
+&none   &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none         &none   &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
+                                  &trans            &trans     &trans        &trans  &trans     &trans
             >;
         };
 
@@ -169,7 +169,7 @@
             label = "Nav";
             bindings = <
 &none  &none      &kp N7  &kp N8  &kp N9  &none       &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
-&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &tog 4
 &none  &none      &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                           &trans  &kp N0  &trans      &trans   &trans     &trans
             >;
@@ -178,7 +178,7 @@
         Func {
             label = "Func";
             bindings = <
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &tog 3    &tog 4  &kp C_VOL_UP  &kp C_NEXT        &kp C_BRI_UP       &bt BT_NXT  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp C_VOL_UP  &kp C_NEXT        &kp C_BRI_UP       &bt BT_NXT  &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &tog 2    &tog 0  &kp C_VOL_DN  &kp C_PLAY_PAUSE  &kp C_BRI_DN       &bt BT_PRV  &none
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp C_MUTE    &kp C_PREV        &ext_power EP_TOG  &bt BT_CLR  &none
                         &trans   &trans   &trans    &trans  &trans        &trans
