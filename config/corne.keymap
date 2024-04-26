@@ -95,6 +95,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        mo_to_3: mo_to_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MO_TO_3";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&to 3>;
+        };
+
+        mo_to_4: mo_to_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MO_TO_4";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&to 4>;
+        };
     };
 
     conditional_layers {
@@ -128,10 +142,10 @@
         Base {
             label = "Base";
             bindings = <
-&none                     &kp Q         &kp W        &kp F        &kp P          &kp B                &kp J              &kp L      &kp U        &kp Y        &kp SEMICOLON  &none
-&mt LS(LA(LC(LGUI))) TAB  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T          &kp G                &kp M              &kp N      &hmr RCMD E  &hmr RALT I  &hmr LCTRL O   &kp APOS
-&none                     &kp Z         &kp X        &kp C        &kp D          &kp V                &kp K              &kp H      &comma_excl  &dot_qmark   &slh_morph     &none
-                                                     &kp LCMD     &mt LSHFT ESC  &lt_hpref 3 SPACE    &lt_hpref 4 ENTER  &bspc_del  &kp UNDER
+&kp TAB                   &kp Q         &kp W        &kp F        &kp P     &kp B              &kp J            &kp L     &kp U        &kp Y        &bspc_del     &slh_morph
+&mt LS(LA(LC(LGUI))) ESC  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T     &kp G              &kp M            &kp N     &hmr RCMD E  &hmr RALT I  &hmr LCTRL O  &kp APOS
+&kp EXCL                  &kp Z         &kp X        &kp C        &kp D     &kp V              &kp K            &kp H     &comma_excl  &dot_qmark   &kp SEMI      &kp QUESTION
+                                                     &kp LCMD     &mo_to_3  &mt LSHFT SPACE    &mt RSHFT ENTER  &mo_to_4  &kp UNDER
             >;
         };
 
@@ -161,7 +175,7 @@
 &none  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none         &none   &kp AMPS   &kp LBKT  &kp RBKT  &kp TILDE   &none
 &to 3  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
 &none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none         &none   &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
-                                 &trans            &trans     &trans        &trans  &trans     &trans
+                                 &to 0             &trans     &trans        &trans  &trans     &trans
             >;
         };
 
@@ -169,9 +183,9 @@
             label = "Nav";
             bindings = <
 &none  &none      &kp N7  &kp N8  &kp N9  &none       &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
-&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &to 4
+&none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
 &none  &none      &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                          &trans  &kp N0  &trans      &trans   &trans     &trans
+                          &trans  &none   &kp N0      &trans   &trans     &to 0
             >;
         };
 
