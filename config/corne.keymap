@@ -174,7 +174,7 @@
 &kp T   &kp Q          &kp LG(X)     &kp LG(C)     &kp LG(V)      &kp RBKT            &none      &none              &none     &none   &none      &to 0
 &kp N4  &hml LCTRL N5  &hml LALT N6  &hml LCMD N7  &hml LSHFT N8  &kp LEFT_BRACKET    &none      &kp LEFT           &kp DOWN  &kp UP  &kp RIGHT  &none
 &kp S   &kp DOT        &kp N0        &kp MINUS     &kp EQUAL      &kp BSLH            &none      &none              &none     &none   &none      &none
-                                     &kp LG(Z)     &kp LS(N)      &mt LSHFT SPACE     &bspc_del  &lt_hpref 0 ENTER  &none
+                                     &kp LG(Z)     &kp LS(N)      &mt LSHFT P         &bspc_del  &lt_hpref 0 ENTER  &none
             >;
         };
 
