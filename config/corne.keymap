@@ -171,10 +171,10 @@
 
         Dorico {
             bindings = <
-&none  &none              &kp N7        &kp N8        &kp N9         &kp PLUS           &none      &none              &none     &none   &none      &none
+&none  &none              &kp N7        &kp N8        &kp N9         &kp PLUS           &none      &none              &none     &none   &none      &to 0
 &none  &hml LCTRL PERIOD  &hml LALT N4  &hml LCMD N5  &hml LSHFT N6  &kp MINUS          &none      &kp LEFT           &kp DOWN  &kp UP  &kp RIGHT  &none
 &none  &none              &kp N1        &kp N2        &kp N3         &kp N0             &none      &none              &none     &none   &none      &none
-                                        &none         &none          &mt LSHFT SPACE    &bspc_del  &lt_hpref 0 ENTER  &none
+                                        &none         &mo 0          &mt LSHFT SPACE    &bspc_del  &lt_hpref 0 ENTER  &none
             >;
         };
 
