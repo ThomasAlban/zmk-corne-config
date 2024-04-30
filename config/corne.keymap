@@ -69,15 +69,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mo_bspc: mo_bspc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_BSPC";
-            bindings = <&mo>, <&bspc_del>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         kp_bspc: kp_bspc {
             compatible = "zmk,behavior-hold-tap";
             label = "KP_BSPC";
@@ -96,18 +87,32 @@
             tapping-term-ms = <200>;
         };
 
-        mo_to_3: mo_to_3 {
+        dorico_acc: dorico_acc {
             compatible = "zmk,behavior-tap-dance";
-            label = "MO_TO_3";
+            label = "DORICO_ACC";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&to 4>;
+            bindings = <&kp LBKT>, <&kp SQT>, <&kp LBRC>, <&kp DQT>;
         };
 
-        mo_to_4: mo_to_4 {
+        dorico_stac: dorico_stac {
             compatible = "zmk,behavior-tap-dance";
-            label = "MO_TO_4";
+            label = "DORICO_STAC";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&to 5>;
+            bindings = <&kp RBKT>, <&kp BSLH>, <&kp RBRC>, <&kp PIPE>;
+        };
+
+        dorico_slr: dorico_slr {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DORICO_SLR";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp T>;
+        };
+
+        dorico_spc: dorico_spc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DORICO_SPC";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp P>;
         };
     };
 
@@ -115,8 +120,8 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
-            if-layers = <4 5>;
-            then-layer = <6>;
+            if-layers = <5 6>;
+            then-layer = <7>;
         };
     };
 
@@ -144,8 +149,8 @@
             bindings = <
 &kp PLUS                  &kp Q         &kp W        &kp F        &kp P            &kp B              &kp J      &kp L              &kp U            &kp Y        &slh_morph    &kp STAR
 &mt LS(LA(LC(LGUI))) ESC  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T            &kp G              &kp M      &kp N              &hmr RCMD E      &hmr RALT I  &hmr LCTRL O  &kp APOS
-&kp MINUS                 &kp Z         &kp X        &kp C        &kp D            &kp V              &kp K      &kp H              &comma_excl      &dot_qmark   &kp SEMI      &kp EQUAL
-                                                     &kp LCMD     &lt_hpref 4 TAB  &mt LSHFT SPACE    &bspc_del  &lt_hpref 5 ENTER  &mt RSHFT UNDER
+&kp Z                     &kp Z         &kp X        &kp C        &kp D            &kp V              &kp K      &kp H              &comma_excl      &dot_qmark   &kp SEMI      &kp EQUAL
+                                                     &kp LCMD     &lt_hpref 5 TAB  &mt LSHFT SPACE    &bspc_del  &lt_hpref 6 ENTER  &mt RSHFT UNDER
             >;
         };
 
@@ -163,18 +168,30 @@
             label = "Game";
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y    &kp U      &kp I      &kp O    &kp P     &to 0
-&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H    &kp J      &kp K      &kp L    &kp SEMI  &mo 4
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo 5
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G       &kp H    &kp J      &kp K      &kp L    &kp SEMI  &mo 5
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo 6
                          &kp LALT  &kp SPACE  &kp LCMD    &kp RET  &bspc_del  &kp LCTRL
             >;
         };
 
         Dorico {
             bindings = <
-&kp T   &kp Q          &kp LG(X)     &kp LG(C)     &kp LG(V)      &kp RBKT            &none      &none              &none     &none   &none      &to 0
-&kp N4  &hml LCTRL N5  &hml LALT N6  &hml LCMD N7  &hml LSHFT N8  &kp LEFT_BRACKET    &none      &kp LEFT           &kp DOWN  &kp UP  &kp RIGHT  &none
-&kp S   &kp DOT        &kp N0        &kp MINUS     &kp EQUAL      &kp BSLH            &none      &none              &none     &none   &none      &none
-                                     &kp LG(Z)     &kp LS(N)      &mt LSHFT P         &bspc_del  &lt_hpref 0 ENTER  &none
+&dorico_stac  &kp Q          &kp LG(X)     &kp LG(C)     &kp LG(V)      &kp BSPC       &none      &none      &none     &none   &none      &to 0
+&dorico_slr   &hml LCTRL N4  &hml LALT N5  &hml LCMD N6  &hml LSHFT N7  &kp N8         &none      &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &none
+&dorico_acc   &kp DOT        &kp N0        &kp MINUS     &kp EQUAL      &kp LG(S)      &none      &none      &none     &none   &none      &none
+                                           &kp LG(Z)     &kp LS(N)      &dorico_spc    &bspc_del  &kp ENTER  &tog 4
+            >;
+
+            label = "Dorico";
+        };
+
+        Dorico2 {
+            label = "Dorico2";
+            bindings = <
+&none  &kp Q         &kp W        &kp F        &kp P            &kp B              &kp J      &kp L              &kp U        &kp Y        &slh_morph    &kp LT
+&none  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T            &kp G              &kp M      &kp N              &hmr RCMD E  &hmr RALT I  &hmr LCTRL O  &kp SQT
+&none  &kp Z         &kp X        &kp C        &kp D            &kp V              &kp K      &kp H              &comma_excl  &dot_qmark   &kp SEMI      &kp GT
+                                  &kp LCMD     &lt_hpref 5 TAB  &mt LSHFT SPACE    &bspc_del  &lt_hpref 6 ENTER  &tog 4
             >;
         };
 
@@ -182,7 +199,7 @@
             label = "Sym";
             bindings = <
 &none  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none         &none   &kp AMPS   &kp LBKT  &kp RBKT  &kp TILDE   &none
-&to 4  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
+&to 5  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
 &none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none         &none   &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
                                  &to 0             &trans     &trans        &trans  &trans     &trans
             >;
