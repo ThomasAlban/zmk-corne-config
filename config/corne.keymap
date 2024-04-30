@@ -177,7 +177,7 @@
         Dorico {
             bindings = <
 &dorico_stac  &kp Q          &kp LG(X)     &kp LG(C)     &kp LG(V)      &kp BSPC       &kp LT     &kp P      &kp M     &kp F   &kp GT     &to 0
-&dorico_slr   &hml LCTRL N4  &hml LALT N5  &hml LCMD N6  &hml LSHFT N7  &kp N8         &kp LS(F)  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &none
+&dorico_slr   &hml LCTRL N4  &hml LALT N5  &hml LCMD N6  &hml LSHFT N7  &kp N8         &kp LS(D)  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &none
 &dorico_acc   &kp DOT        &kp N0        &kp MINUS     &kp EQUAL      &kp LG(S)      &none      &none      &none     &none   &none      &none
                                            &kp LG(Z)     &kp LS(N)      &dorico_spc    &bspc_del  &kp ENTER  &tog 4
             >;
