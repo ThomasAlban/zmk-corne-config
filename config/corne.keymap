@@ -198,10 +198,10 @@
         Sym {
             label = "Sym";
             bindings = <
-&none  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &none         &none   &kp AMPS   &kp LBKT  &kp RBKT  &kp TILDE   &none
-&to 5  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)    &kp AT  &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
-&none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &none         &none   &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
-                                 &to 0             &trans     &trans        &trans  &trans     &trans
+&none  &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE   &kp GRAVE      &kp TILDE   &kp AMPS   &kp LBKT  &kp RBKT  &none       &none
+&none  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL  &kp LA(N3)     &kp AT      &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK   &none
+&none  &kp CARET  &kp SLASH      &kp STAR          &kp BSLH   &kp PERCENT    &kp LA(N2)  &kp HASH   &kp LBRC  &kp RBRC  &kp DOLLAR  &none
+                                 &trans            &trans     &trans         &trans      &trans     &trans
             >;
         };
 
@@ -211,7 +211,7 @@
 &none  &none      &kp N7  &kp N8  &kp N9  &none       &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
 &none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
 &none  &none      &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                          &trans  &none   &kp N0      &trans   &trans     &to 0
+                          &trans  &none   &kp N0      &trans   &trans     &trans
             >;
         };
 
