@@ -149,7 +149,7 @@
             bindings = <
 &kp PLUS                  &kp Q         &kp W        &kp F        &kp P            &kp B              &kp J      &kp L              &kp U            &kp Y        &slh_morph    &kp STAR
 &mt LS(LA(LC(LGUI))) ESC  &hml LCTRL A  &hml LALT R  &hml LCMD S  &kp T            &kp G              &kp M      &kp N              &hmr RCMD E      &hmr RALT I  &hmr LCTRL O  &kp APOS
-&kp Z                     &kp Z         &kp X        &kp C        &kp D            &kp V              &kp K      &kp H              &comma_excl      &dot_qmark   &kp SEMI      &kp EQUAL
+&kp MINUS                 &kp Z         &kp X        &kp C        &kp D            &kp V              &kp K      &kp H              &comma_excl      &dot_qmark   &kp SEMI      &kp EQUAL
                                                      &kp LCMD     &lt_hpref 5 TAB  &mt LSHFT SPACE    &bspc_del  &lt_hpref 6 ENTER  &mt RSHFT UNDER
             >;
         };
