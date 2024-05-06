@@ -208,9 +208,9 @@
         Nav {
             label = "Nav";
             bindings = <
-&none  &none      &kp N7  &kp N8  &kp N9  &none       &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
+&none  &kp SLASH  &kp N7  &kp N8  &kp N9  &kp STAR    &email2  &sk RSHFT  &sk RCMD   &sk RALT   &sk RCTRL  &none
 &none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS    &email   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none      &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &kp CARET  &kp N1  &kp N2  &kp N3  &kp DOT     &none    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                           &trans  &none   &kp N0      &trans   &trans     &trans
             >;
         };
