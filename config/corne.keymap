@@ -176,10 +176,10 @@
 
         Dorico {
             bindings = <
-&dorico_stac  &kp Q               &kp LG(X)    &kp LG(C)    &kp LG(V)      &kp BSPC       &kp LT     &kp P      &kp M     &kp F   &kp GT     &to 0
-&dorico_slr   &mt LCTRL NUMBER_4  &mt LALT N5  &mt LCMD N6  &mt LSHIFT N7  &kp N8         &kp LS(D)  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &mo 4
-&dorico_acc   &kp DOT             &kp N0       &kp MINUS    &kp EQUAL      &kp LG(S)      &none      &none      &none     &none   &none      &none
-                                               &kp LG(Z)    &kp LS(N)      &dorico_spc    &bspc_del  &kp ENTER  &none
+&dorico_stac  &kp Q               &kp LG(X)    &kp LG(C)    &kp LG(V)      &kp BSPC       &kp LT     &kp P         &kp M         &kp F       &kp GT         &to 0
+&dorico_slr   &mt LCTRL NUMBER_4  &mt LALT N5  &mt LCMD N6  &mt LSHIFT N7  &kp N8         &kp LS(D)  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &mo 4
+&dorico_acc   &kp DOT             &kp N0       &kp MINUS    &kp EQUAL      &kp LG(S)      &none      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &none
+                                               &kp LG(Z)    &kp LS(N)      &dorico_spc    &bspc_del  &kp ENTER     &none
             >;
 
             label = "Dorico";
