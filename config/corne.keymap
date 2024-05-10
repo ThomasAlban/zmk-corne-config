@@ -87,43 +87,53 @@
             tapping-term-ms = <200>;
         };
 
-        dorico_acc: dorico_acc {
+        d_acc: d_acc {
             compatible = "zmk,behavior-tap-dance";
-            label = "DORICO_ACC";
+            label = "D_ACC";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&kp SQT>, <&kp LBRC>, <&kp DQT>;
         };
 
-        dorico_stac: dorico_stac {
+        d_stac: d_stac {
             compatible = "zmk,behavior-tap-dance";
-            label = "DORICO_STAC";
+            label = "D_STAC";
             #binding-cells = <0>;
             bindings = <&kp RBKT>, <&kp BSLH>, <&kp RBRC>, <&kp PIPE>;
         };
 
-        dorico_slr: dorico_slr {
+        d_slr: d_slr {
             compatible = "zmk,behavior-tap-dance";
-            label = "DORICO_SLR";
+            label = "D_SLR";
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp T>;
         };
 
-        dorico_spc: dorico_spc {
+        d_spc: d_spc {
             compatible = "zmk,behavior-tap-dance";
-            label = "DORICO_SPC";
+            label = "D_SPC";
             #binding-cells = <0>;
-            bindings = <&kp P>, <&kp SPACE>;
+            bindings = <&kp SPACE>, <&kp P>;
         };
 
-        dorico_mt: dorico_mt {
+        d_mt: d_mt {
             compatible = "zmk,behavior-hold-tap";
-            label = "DORICO_MT";
+            label = "D_MT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             hold-while-undecided;
             quick-tap-ms = <150>;
+        };
+
+        d_shft_spc: d_shft_spc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "D_SHFT_SPC";
+            bindings = <&kp>, <&d_spc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
         };
     };
 
@@ -187,10 +197,10 @@
 
         Dorico {
             bindings = <
-&dorico_stac  &kp Q                &kp LG(X)           &kp LG(C)           &kp LG(V)            &kp BSPC       &kp LT     &kp P         &kp M         &kp F       &kp GT         &to 0
-&dorico_slr   &dorico_mt LCTRL N4  &dorico_mt LALT N5  &dorico_mt LCMD N6  &dorico_mt LSHFT N7  &kp N8         &kp LS(D)  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &mo 4
-&dorico_acc   &kp DOT              &kp N0              &kp MINUS           &kp EQUAL            &kp LG(S)      &none      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &none
-                                                       &kp LG(Z)           &kp LS(N)            &dorico_spc    &bspc_del  &kp ENTER     &none
+&d_stac  &kp Q           &kp LG(X)      &kp LG(C)      &kp LG(V)  &kp BSPC               &kp LT     &kp P         &kp M         &kp F       &kp GT         &to 0
+&d_slr   &d_mt LCTRL N4  &d_mt LALT N5  &d_mt LCMD N6  &kp N7     &kp N8                 &kp LS(D)  &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      &mo 4
+&d_acc   &kp DOT         &kp N0         &kp MINUS      &kp EQUAL  &kp LG(S)              &none      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &none
+                                        &kp LG(Z)      &kp LS(N)  &d_shft_spc LSHFT 0    &bspc_del  &kp ENTER     &none
             >;
 
             label = "Dorico";
