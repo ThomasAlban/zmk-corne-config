@@ -144,7 +144,6 @@
             bindings = <&kp>, <&key_repeat>;
 
             #binding-cells = <2>;
-            hold-while-undecided;
             tapping-term-ms = <150>;
         };
     };
